@@ -32,7 +32,8 @@ namespace GymManager.Infrastructure.Persistance.Extensions
                     Id = 3,
                     Date = new DateTime(2022, 1, 21),
                     Description = "Zajęcia crossfit zostały odwołane, Przepraszamy"
-                }, new Announcement
+                }, 
+                new Announcement
                 {
                     Id = 4,
                     Date = new DateTime(2022, 1, 22),

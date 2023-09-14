@@ -10,6 +10,9 @@ namespace GymManager.Infrastructure.Persistance.Configurations
         {
             builder.ToTable("TicketTypes");
 
+            builder.Property(x => x.Price)
+                .HasColumnType("decimal(6,3)");
+
 
         }
     }

@@ -24,7 +24,7 @@ namespace GymManager.Infrastructure.Persistance.Configurations
             builder
                 .HasOne(x => x.Settings)
                 .WithMany(x => x.Positions)
-                .HasForeignKey(x => x.Settings.Id)
+                .HasForeignKey(x => x.SettingsId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

@@ -17,11 +17,13 @@ namespace GymManager.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+
             var connectionString = configuration.GetConnectionString("DefaultConnection");
+
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString)
             .EnableSensitiveDataLogging());
-                ;
+               
 
             return services;
         }
