@@ -16,9 +16,6 @@ namespace GymManager.Infrastructure.Persistance.Configurations
             builder.Property(x => x.TicketTypeId)
                     .HasDefaultValue(1);
 
-            builder.Property(x => x.Price)
-                .HasColumnType("decimal(6,3)");
-
 
             builder
                 .HasOne(x => x.User)

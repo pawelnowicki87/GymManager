@@ -1,4 +1,5 @@
 using GymManager.Application;
+using GymManager.Application.Common.Interfaces;
 using GymManager.Infrastructure;
 using GymManager.MVC.Extensions;
 using GymManager.MVC.Middewares;
@@ -24,12 +25,18 @@ builder.Services.AddCulture();
 
 
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+    // Add services to the container.
+    builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-app.UseInfrastructure();
+using (var scope = app.Services.CreateScope())
+{
+    app.UseInfrastructure(scope.ServiceProvider.GetRequiredService<IApplicationDbContext>(), app.Services.GetService<IAppSettingsService>(),
+        app.Services.GetService<IEmail>());
+}
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

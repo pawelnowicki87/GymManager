@@ -20,8 +20,6 @@ namespace GymManager.Infrastructure.Persistance.Configurations
             builder.Property(x => x.TicketId)
                 .IsRequired();
 
-            builder.Property(x => x.Value)
-                .HasColumnType("decimal(6,3)");
 
             builder
                 .HasOne(x => x.User)

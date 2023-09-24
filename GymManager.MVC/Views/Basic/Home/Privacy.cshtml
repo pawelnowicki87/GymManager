@@ -1,6 +1,16 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@inject IConfiguration configuration
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    var templateKey = configuration.GetSection("TemplateKey").Value;
+    Layout = $"/Views/{templateKey}/Shared/_LayoutMain.cshtml";
+    ViewData["Title"] = "Polityka prywatności";
+}
+
+<div class="container">
+    <div class="pt-3 pb-5">
+        <h1>@ViewBag.Title</h1>
+    </div>
+
+    <p class="pt-3">Lorem ipsum dolor sit amet. Sed galisum expedita ut fugit aliquid eos perspiciatis corrupti et corrupti minima aut voluptates modi ea dolor nisi est impedit modi! Est laborum tenetur aut dolorem recusandae et dolor voluptatum sed impedit dignissimos? Quo illum voluptas aut quae autem aut incidunt minima quo quibusdam dolores hic aliquid quia et fuga dolor! Ut accusamus recusandae ad laboriosam dignissimos eum natus molestiae est autem adipisci ea reiciendis autem sit consectetur explicabo sed reiciendis illo. </p><p>Quo quod saepe id autem autem rem praesentium eveniet ea quas magni. Et esse molestias id rerum fugiat id voluptatibus dolores ut quia accusantium et recusandae placeat ad illo quae. Est libero mollitia hic quas delectus et officia officiis. Non dolor doloribus a similique ratione ex reiciendis sunt et perferendis beatae et enim ipsum sit veniam perferendis vel aliquam quidem? </p><p>Sit harum praesentium aut iure consectetur ea debitis sint est nihil repellat At consectetur ducimus et sunt omnis. At ducimus voluptas non maxime recusandae aut placeat sint cum voluptatibus culpa sit voluptas soluta sit necessitatibus temporibus. Ut harum neque ea provident ipsam aut omnis laborum et repellat dolores rem error quia ut minus nobis qui libero maiores. </p>
+
+</div>

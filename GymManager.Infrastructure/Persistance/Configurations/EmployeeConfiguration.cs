@@ -19,8 +19,7 @@ namespace GymManager.Infrastructure.Persistance.Configurations
 
             builder.Property(x => x.UserId)
                 .IsRequired();
-            builder.Property(x => x.Salary)
-                .HasColumnType("decimal(6,3)");
+
 
         }
     }
