@@ -12,8 +12,8 @@ namespace GymManager.Infrastructure.Services
         public string _port;
         public string _senderEmail;
         public string _senderEmailPassword;
-        public string _senderEmailName;
-        public string _senderEmailLogin;
+        public string _senderName;
+        public string _senderLogin;
 
         public async Task Update(IAppSettingsService appSettingsService)
         {
@@ -21,15 +21,15 @@ namespace GymManager.Infrastructure.Services
             _port = Convert.ToInt32(await appSettingsService.Get(SettingsDict.Port));
             _senderEmail = await appSettingsService.Get(SettingsDict.SenderEmail);
             _senderEmailPassword = await appSettingsService.Get(SettingsDict.SenderEmailPassword);
-            _senderEmailName = await appSettingsService.Get(SettingsDict.SenderName);
-            _senderEmailLogin = await appSettingsService.Get(SettingsDict.SenderLogin);
+            _senderName = await appSettingsService.Get(SettingsDict.SenderName);
+            _senderLogin = await appSettingsService.Get(SettingsDict.SenderLogin);
 
         }
         public async Task SendAsync(string subject, string body, string to, string attachmentPath = null)
         {
             var message = new MimeMessage();
 
-            message.From.Add(new MailboxAddress(_senderEmailName, _senderEmail));
+            message.From.Add(new MailboxAddress(_senderName, _senderEmail));
             message.To.Add(MailboxAddress.Parse(to));
             message.Subject = subject;
 
@@ -54,6 +54,11 @@ namespace GymManager.Infrastructure.Services
             {
                 await client.ConnectAsync(_hostSmtp, _port,
                     MailKit.Security.SecureSocketOptions.Auto);
+
+                await client.AuthenticateAsync(!string.IsNullOrWhiteSpace(_senderLogin) ? _senderLogin : _senderEmail, _senderEmailPassword);
+
+                await client.SendAsync(message);
+                await client.DisconnectAsync(true);
             }
 
         }
