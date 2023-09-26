@@ -4,20 +4,13 @@ using GymManager.Application.Common.Interfaces;
 using GymManager.Infrastructure;
 using GymManager.MVC.Extensions;
 using GymManager.MVC.Middewares;
-using Microsoft.AspNetCore.Mvc.Razor;
-using NLog.Extensions.Logging;
 using NLog.Web;
-using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(LogLevel.Information);
 builder.Logging.AddNLogWeb();
-
-
-
-
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
