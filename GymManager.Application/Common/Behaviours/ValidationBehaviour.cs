@@ -1,0 +1,40 @@
+﻿using FluentValidation;
+using MediatR;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+
+namespace GymManager.Application.Common.Behaviours
+{
+    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    {
+        private readonly IEnumerable<IValidator<TRequest>> _validators;
+
+        public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators)
+        {
+            _validators = validators;
+        }
+        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        {
+            if(_validators.Any())
+            {
+                var context = new ValidationContext<TRequest>(request);
+                var validatadionResults = await Task.WhenAll(
+                    _validators.Select(x =>
+                    x.ValidateAsync(context, cancellationToken)));
+
+                var failures = validatadionResults
+                    .Where(x => x.Errors.Any())
+                    .SelectMany(x => x.Errors)
+                    .ToList();
+
+                if(failures.Any())
+                {
+                    throw new Exceptions.ValidationException(failures);
+                }
+            }
+
+            return await next();
+
+        }
+    }
+}

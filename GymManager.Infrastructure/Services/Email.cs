@@ -9,7 +9,7 @@ namespace GymManager.Infrastructure.Services
     public class Email : IEmail
     {
         public string _hostSmtp;
-        public string _port;
+        public int _port;
         public string _senderEmail;
         public string _senderEmailPassword;
         public string _senderName;
@@ -23,7 +23,6 @@ namespace GymManager.Infrastructure.Services
             _senderEmailPassword = await appSettingsService.Get(SettingsDict.SenderEmailPassword);
             _senderName = await appSettingsService.Get(SettingsDict.SenderName);
             _senderLogin = await appSettingsService.Get(SettingsDict.SenderLogin);
-
         }
         public async Task SendAsync(string subject, string body, string to, string attachmentPath = null)
         {

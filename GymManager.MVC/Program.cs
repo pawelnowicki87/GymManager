@@ -1,3 +1,4 @@
+using AspNetCore.ReCaptcha;
 using GymManager.Application;
 using GymManager.Application.Common.Interfaces;
 using GymManager.Infrastructure;
@@ -22,6 +23,8 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.DefineViewLocation(builder.Configuration);
 builder.Services.AddCulture();
+
+builder.Services.AddReCaptcha(builder.Configuration.GetSection("ReCaptcha"));
 
 
 

@@ -1,27 +1,28 @@
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 
-.main-navbar{
+.main-navbar {
     font-size: 1.25rem;
 }
 
-.main-description{
-    font-size:1.25rem;
+.main-description {
+    font-size: 1.25rem;
 }
-.secondary-description{
+
+.secondary-description {
     font-size: 1.1rem;
 }
 
@@ -30,14 +31,14 @@ a {
 }
 
 .carousel-control-prev, .carousel-control-next {
-    filter:invert(100%);
+    filter: invert(100%);
 }
 
-.text-decoration{
+.text-decoration {
     list-style-type: none;
 }
 
-.privacy-police-info{
+.privacy-police-info {
     font-size: 12px;
     position: fixed;
     bottom: 0;
@@ -48,7 +49,45 @@ a {
     padding: 5px 0;
 }
 
-.privacy-police-btn{
+.privacy-police-btn {
     font-size: 11px;
+}
 
+.field-validation-error {
+    color: #ff3333;
+    margin-left: .5rem;
+}
+
+i.fas {
+    margin-right: 0.3rem;
+}
+
+.card-border-top {
+    border-top: 3px solid #0d6efd;
+}
+
+.card-promary {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1rem;
+}
+
+@media screen and (mid-width: 640px) {
+    .card-body {
+        padding: 2rem;
+    }
+}
+
+ul.client-panel {
+    width: 100%;
+}
+
+ul.client-panel li.nav-item {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+ul.client-panel li.nav-item.active {
+    background-color: #00fbff;
+    border-radius: 5px;
 }

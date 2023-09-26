@@ -74,6 +74,28 @@
       "files": [
         "jquery.cookie.min.js"
       ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-core@43.1.0",
+      "destination": "wwwroot/lib/cldr-core/",
+      "files": [
+        "supplemental/currencyData.json"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/",
+      "files": [
+        "toastr.min.js",
+        "toastr.min.css"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "font-awesome@6.4.2",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }
