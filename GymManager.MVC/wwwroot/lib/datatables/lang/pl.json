@@ -1,0 +1,240 @@
+{
+  "processing": "Przetwarzanie...",
+  "search": "Szukaj:",
+  "lengthMenu": "Poka� _MENU_ pozycji",
+  "info": "Pozycje od _START_ do _END_ z _TOTAL_ ��cznie",
+  "infoEmpty": "Pozycji 0 z 0 dost�pnych",
+  "infoFiltered": "(filtrowanie spo�r�d _MAX_ dost�pnych pozycji)",
+  "loadingRecords": "Wczytywanie...",
+  "zeroRecords": "Nie znaleziono pasuj�cych pozycji",
+  "paginate": {
+    "first": "Pierwsza",
+    "previous": "Poprzednia",
+    "next": "Nast�pna",
+    "last": "Ostatnia"
+  },
+  "aria": {
+    "sortAscending": ": aktywuj, by posortowa� kolumn� rosn�co",
+    "sortDescending": ": aktywuj, by posortowa� kolumn� malej�co"
+  },
+  "autoFill": {
+    "cancel": "Anuluj",
+    "fill": "Wype�nij wszystkie kom�rki <i>%d<\/i>",
+    "fillHorizontal": "Wype�nij kom�rki w poziomie",
+    "fillVertical": "Wype�nij kom�rki w pionie"
+  },
+  "buttons": {
+    "collection": "Zbi�r <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+    "colvis": "Widoczno�� kolumny",
+    "colvisRestore": "Przywr�� widoczno��",
+    "copy": "Kopiuj",
+    "copyKeys": "Naci�nij Ctrl lub u2318 + C, aby skopiowa� dane tabeli do schowka systemowego. <br \/> <br \/> Aby anulowa�, kliknij t� wiadomo�� lub naci�nij Esc.",
+    "copySuccess": {
+      "1": "Skopiowano 1 wiersz do schowka",
+      "_": "Skopiowano %d wierszy do schowka"
+    },
+    "copyTitle": "Skopiuj do schowka",
+    "csv": "CSV",
+    "excel": "Excel",
+    "pageLength": {
+      "-1": "Poka� wszystkie wiersze",
+      "_": "Poka� %d wierszy"
+    },
+    "pdf": "PDF",
+    "print": "Drukuj",
+    "createState": "Utw�rz stan",
+    "removeAllStates": "Usu� wszystkie stany",
+    "removeState": "Usu�",
+    "renameState": "Zmie� nazw�",
+    "savedStates": "Zapisane stany",
+    "stateRestore": "Stan %d",
+    "updateState": "Aktualizuj"
+  },
+  "emptyTable": "Brak danych w tabeli",
+  "searchBuilder": {
+    "add": "Dodaj warunek",
+    "clearAll": "Wyczy�� wszystko",
+    "condition": "Warunek",
+    "data": "Dane",
+    "button": {
+      "_": "Aktywne zapytania",
+      "0": "Budowanie zapytania"
+    },
+    "conditions": {
+      "array": {
+        "contains": "Zawiera",
+        "empty": "Pusta",
+        "equals": "R�wna si�",
+        "not": "Nie",
+        "notEmpty": "Nie pusta",
+        "without": "Bez"
+      },
+      "date": {
+        "after": "Po",
+        "before": "Przed",
+        "between": "Pomi�dzy",
+        "empty": "Pusto",
+        "equals": "R�wna",
+        "not": "Nie",
+        "notBetween": "Nie pomi�dzy",
+        "notEmpty": "Nie pusta"
+      },
+      "number": {
+        "between": "Pomi�dzy",
+        "empty": "Pusty",
+        "equals": "R�wny",
+        "gt": "Wi�kszy ni�",
+        "gte": "R�wny lub wi�kszy ni�",
+        "lt": "Mniejszy ni�",
+        "lte": "R�wny lub mniejszy ni�",
+        "not": "Nie",
+        "notBetween": "Nie pomi�dzy",
+        "notEmpty": "Nie pusty"
+      },
+      "string": {
+        "contains": "Zawiera",
+        "empty": "Pusty",
+        "endsWith": "Ko�czy si� na",
+        "equals": "R�wna si�",
+        "not": "Nie",
+        "notEmpty": "Nie pusty",
+        "startsWith": "Zaczyna si� od",
+        "notContains": "Nie zawiera",
+        "notStartsWith": "Nie zaczyna si� od",
+        "notEndsWith": "Nie ko�czy si� na"
+      }
+    },
+    "deleteTitle": "Czyszczenie",
+    "leftTitle": "Lewy",
+    "logicAnd": "I",
+    "logicOr": "Lub",
+    "rightTitle": "Prawy",
+    "title": {
+      "_": "Aktywne zapytania",
+      "0": "Budowanie zapytania"
+    },
+    "value": "Warto��"
+  },
+  "datetime": {
+    "amPm": [
+      "am",
+      "pm"
+    ],
+    "hours": "Godzina",
+    "minutes": "Minuta",
+    "next": "Nast�pne",
+    "previous": "Poprzednie",
+    "seconds": "Sekunda",
+    "unknown": "nieznana",
+    "months": {
+      "0": "Stycze�",
+      "1": "Luty",
+      "10": "Listopad",
+      "11": "Grudzie�",
+      "2": "Marzec",
+      "3": "Kwiecie�",
+      "4": "Maj",
+      "5": "Czerwiec",
+      "6": "Lipiec",
+      "7": "Sierpie�",
+      "8": "Wrzesie�",
+      "9": "Pa�dziernik"
+    },
+    "weekdays": [
+      "Nd",
+      "Pn",
+      "Wt",
+      "�r",
+      "Czw",
+      "Pt",
+      "So"
+    ]
+  },
+  "editor": {
+    "close": "Zamknij",
+    "create": {
+      "button": "Dodaj",
+      "submit": "Dodaj",
+      "title": "Dodawanie nowego wpisu"
+    },
+    "edit": {
+      "button": "Edytuj",
+      "submit": "Aktualizuj",
+      "title": "Aktualizacja wpisu"
+    },
+    "error": {
+      "system": "Nast�pi� b��d systemu (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Wi�cej informacji&lt;\\\/a&gt;).<\/a>"
+    },
+    "multi": {
+      "info": "Wybrane pole zawiera wiele element�w z r�nymi warto�ciami. Aby zmieni� ich warto�� kliknij w nie, inaczej zachowane zostan� ich warto�ci domy�lne.",
+      "noMulti": "Ta warto�� mo�e by� edytowana oddzielnie - niezale�nie od grupy.",
+      "restore": "Cofnij zmiany",
+      "title": "Pole z wieloma warto�ciami"
+    },
+    "remove": {
+      "button": "Usu�",
+      "confirm": {
+        "_": "Czy na pewno chcesz usun�� %d rz�d�w?",
+        "1": "Czy na pewno chcesz usun�� 1 rz�d?"
+      },
+      "submit": "Usu�",
+      "title": "Usuwanie"
+    }
+  },
+  "searchPanes": {
+    "clearMessage": "Wyczy�� wszystkie",
+    "collapse": {
+      "_": "Aktywne grupowania (%d)",
+      "0": "Grupowanie"
+    },
+    "count": "{total}",
+    "countFiltered": "{shown} ({total})",
+    "emptyPanes": "Brak paneli wyszuka�",
+    "loadMessage": "�aduj� panele wyszuka�",
+    "title": "Aktywne filtry",
+    "showMessage": "Poka� wszystko",
+    "collapseMessage": "Rozwi� wszystko"
+  },
+  "select": {
+    "cells": {
+      "_": "zaznaczono %d kom�rek",
+      "1": "zaznaczono %d kom�rk�"
+    },
+    "columns": {
+      "_": "zaznaczono %d kolumn",
+      "1": "zaznaczono %d kolumn�"
+    }
+  },
+  "stateRestore": {
+    "creationModal": {
+      "button": "Utw�rz",
+      "columns": {
+        "search": "Wyszukiwanie kolumny",
+        "visible": "Widoczno�� kolumny"
+      },
+      "name": "Nazwa:",
+      "order": "Sortowanie",
+      "paging": "Stronicowanie",
+      "scroller": "Przewijanie",
+      "search": "Szukanie",
+      "searchBuilder": "Tworzenie zapyta�",
+      "select": "Wybieranie",
+      "title": "Utw�rz nowy stan",
+      "toggleLabel": "Zawiera:"
+    },
+    "duplicateError": "Stan o tej nazwie ju� istnieje.",
+    "emptyError": "Nazwa nie mo�e by� pusta.",
+    "emptyStates": "Brak zapisanych stan�w",
+    "removeConfirm": "Czy na pewno chcesz usun�� %s?",
+    "removeError": "Nie uda�o si� usun�� stanu.",
+    "removeJoiner": "oraz",
+    "removeSubmit": "Usu�",
+    "removeTitle": "Usu� stan",
+    "renameButton": "Zmie� nazw�",
+    "renameLabel": "Nowa nazwa dla %s:",
+    "renameTitle": "Zmie� nazw� stanu"
+  },
+  "decimal": ",",
+  "infoThousands": " ",
+  "thousands": " "
+}  

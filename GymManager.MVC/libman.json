@@ -97,5 +97,44 @@
       "library": "font-awesome@6.4.2",
       "destination": "wwwroot/lib/font-awesome/"
     }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "datatables@1.10.21",
+  "destination": "wwwroot/lib/datatables/",
+  "files": [
+    "js/jquery.dataTables.min.js"
   ]
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "datatables.net-bs5@1.13.6",
+  "destination": "wwwroot/lib/datatables.net-bs5/"
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "datatables.net-responsive-bs5@2.5.0",
+  "destination": "wwwroot/lib/datatables.net-responsive-bs5/"
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "datatables.net-responsive-bs5@2.5.0",
+  "destination": "wwwroot/lib/datatables.net-responsive-bs5/"
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "datatables-responsive@2.5.0",
+  "destination": "wwwroot/lib/datatables-responsive/"
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "datatables-buttons@2.4.2",
+  "destination": "wwwroot/lib/datatables-buttons/"
+}
+]
 }

@@ -41,8 +41,12 @@ namespace GymManager.Infrastructure
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
+            services.AddScoped<IDateTimeService, DateTimeService>();
+            services.AddScoped<IRoleManagerService, RoleManagerService>();
             services.AddSingleton<IEmail, Email>();
             services.AddSingleton<IAppSettingsService, AppSettingsService>();
+            services.AddHttpContextAccessor();
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
 
             return services;
         }

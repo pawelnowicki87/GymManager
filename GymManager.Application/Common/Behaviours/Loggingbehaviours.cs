@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using GymManager.Application.Common.Interfaces;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 
@@ -7,17 +8,22 @@ namespace GymManager.Application.Common.Behaviours
     public class Loggingbehaviours<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
         private readonly ILogger<TRequest> _logger;
+        private readonly ICurrentUserService _currentUserService;
 
-        public Loggingbehaviours(ILogger<TRequest> logger)
+        public Loggingbehaviours(ILogger<TRequest> logger,
+            ICurrentUserService currentUserService)
         {
             _logger = logger;
+            _currentUserService = currentUserService;
         }
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             var requestName = typeof(TRequest).Name;
+            var userId = _currentUserService.UserId ?? string.Empty;
+            var userName = _currentUserService.UserName ?? string.Empty;
 
             _logger.LogInformation($"Handling {requestName}");
-            _logger.LogInformation("GymManager Request: {@Name} {@Request}", requestName, request);
+            _logger.LogInformation("GymManager Request: {@Name} {@UserId} {@UserName} {@Request}", requestName, userId, userName, request);
 
             var response = await next();
 

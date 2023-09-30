@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using GymManager.Application.Common.Interfaces;
+using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -12,22 +13,27 @@ namespace GymManager.Application.Common.Behaviours
     public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
         private readonly ILogger<TRequest> _logger;
+        private readonly ICurrentUserService _currentUserService;
         private readonly Stopwatch _timer;
          
-        public PerformanceBehaviour(ILogger<TRequest> logger)
+        public PerformanceBehaviour(ILogger<TRequest> logger,
+            ICurrentUserService currentUserService)
         {
             _timer = new Stopwatch();
             _logger = logger;
+            _currentUserService = currentUserService;
         }
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
+            var userId = _currentUserService.UserId ?? string.Empty;
+            var userName = _currentUserService.UserName ?? string.Empty;
             _timer.Start();
             var response = await next();
             _timer.Stop();
             var elapsedMilliseconds = _timer.ElapsedMilliseconds;
             if(elapsedMilliseconds > 500)
             {
-                _logger.LogInformation("GymManager Long Running Request: {@Name} ({@ElapsedMilliseconds} milliseconds) {@Request}", typeof(TRequest).Name, elapsedMilliseconds, request);
+                _logger.LogInformation("GymManager Long Running Request: {@Name} ({@ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request} ", typeof(TRequest).Name, elapsedMilliseconds,  userId, userName, request );
             }
             return response;
         }

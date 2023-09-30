@@ -23,7 +23,7 @@
     <li class="nav-item ">
         <a asp-controller="Employee" asp-action="Employees" class="nav-link align-middle px-0 text-white"><i class="fas fa-solid fa-user-shield"></i><span class="d-none d-sm-inline">Pracownicy</span></a>
     </li>
-    <li class="nav-item ">
+    <li class="nav-item @Url.MakeActiveClass("Role", "Roles")">
         <a asp-controller="Role" asp-action="Roles" class="nav-link align-middle px-0 text-white"><i class="fas fa-solid fa-unlock-keyhole"></i><span class="d-none d-sm-inline">Role</span></a>
     </li>
     <li class="nav-item">

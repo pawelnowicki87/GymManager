@@ -17,7 +17,5 @@ namespace GymManager.Application.Dictionaries
         public const string BannerVisible = "BannerVisible";
         public const string FooterColor = "FooterColor";
         public const string AdminEmail = "AdminEmail";
-
-
     }
 }
