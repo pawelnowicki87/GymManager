@@ -1,0 +1,9 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Błąd serwera";
+}
+
+<header>
+    <h1 class="text-danger">Przepraszamy, coś poszło nie tak</h1>
+    @Html.ActionLink("Strona główna", "Index","Home")
+</header>
