@@ -18,5 +18,28 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+}
+
+.main-navbar {
+    font-size: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-description {
+    font-size: 1.12rem;
+}
+
+.secondary-description {
+    font-size: 1.1rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+.no-decoration {
+    list-style-type: none;
 }

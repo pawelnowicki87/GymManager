@@ -1,8 +1,192 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@inject IConfiguration configuration
+
+@{
+    var templateKey = configuration.GetSection("TemplateKey").Value;
+    Layout = $"/Views/{templateKey}/Shared/_LayoutMain.cshtml";
+    ViewData["Title"] = "Strona główna";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div id="carouselExampleControls" class="carousel slide mt-3 mb-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/carousel-personal.png" class="d-block w-100" alt="carousel-personal">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/carousel-strength.png" class="d-block w-100" alt="carousel-strength">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/carousel-interval.png" class="d-block w-100" alt="carousel-interval">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="main-description p-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mt-5 secondary-description">
+        <div class="col"> 
+            <div class="card border-0 m-5"></div>
+                <img src="~/images/card-gym.png" class="card-img-top" alt="card-gym" />
+                <div class="card-body">
+                    <h4 class="card-title">Siłownia</h4>
+                    <p class="card-text">
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+                </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card border-0 m-5"></div>
+            <img src="~/images/card-fitness.png" class="card-img-top" alt="card-fitness" />
+            <div class="card-body">
+                <h4 class="card-title">Zajęcia fitnes</h4>
+                <p class="card-text">
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5"></div>
+            <img src="~/images/card-crossfit.png" class="card-img-top" alt="crossfit" />
+            <div class="card-body">
+                <h4 class="card-title">Crossfit</h4>
+                <p class="card-text">
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5"></div>
+            <img src="~/images/card-massage.png" class="card-img-top" alt="card-massage" />
+            <div class="card-body">
+                <h4 class="card-title">Masaż</h4>
+                <p class="card-text">
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5"></div>
+            <img src="~/images/card-pool.png" class="card-img-top" alt="card-pool" />
+            <div class="card-body">
+                <h4 class="card-title">Basen</h4>
+                <p class="card-text">
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5"></div>
+            <img src="~/images/card-trainer.png" class="card-img-top" alt="card-trainer" />
+            <div class="card-body">
+                <h4 class="card-title">Opieka trenera personalnego</h4>
+                <p class="card-text">
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="main-description p-5">
+                <figure class="text-center p-5">
+                    <blockquote class="blockquote">
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </blockquote>
+                    <figcaption class="blockquote-footer" mt-3 secondary-description>
+                        Some famous in <cite title="Source title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <div class="card-body text-center secondary-description">
+                    <h2 class="card-title">Miesięczny karnet</h2>
+                    <p class="card-text m-4">Możesz korzystać ze wszystkich usug przez 24 godzint. W skład pakietu wchodzi: 
+                    </p>
+                    <ul class="no-decoration">
+                        <li>🙈 Usługa 1</li>
+                        <li>🙋 Usługa 2</li>
+                        <li>💓 Usługa 3</li>
+                    </ul>
+                    <a href="#" class="btn btn-danger btn-lg mt-2">Kup wejściówkę</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <div class="card-body text-center secondary-description">
+                    <h2 class="card-title">Pojedyncza wejściówka</h2>
+                    <p class="card-text m-4">
+                        Miesięczny dostęp do wszystkich usług. W skład pakietu wchodzi:
+                    </p>
+                    <ul class="no-decoration">
+                        <li>🙈 Usługa 1</li>
+                        <li>🙋 Usługa 2</li>
+                        <li>💓 Usługa 3</li>
+                        <li>💓 Usługa 4</li>
+                        <li>💓 Usługa 5</li>
+                    </ul>
+                    <a href="#" class="btn btn-danger btn-lg mt-2">Kup wejściówkę</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="main-description p-5">
+                <figure class="text-center p-5">
+                    <blockquote class="blockquote">
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLetraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </blockquote>
+                    <figcaption class="blockquote-footer" mt-3 secondary-description>
+                        Some famous in <cite title="Source title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
 </div>
