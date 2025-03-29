@@ -1,8 +1,4 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using GymManager.UI.Models;
-using MediatR;
-using GymManager.Application.Tickets.Queries.GetTicketById;
 using GymManager.Application.Tickets.Commands.AddTicket;
 
 namespace GymManager.UI.Controllers;
@@ -29,9 +25,8 @@ public class HomeController : BaseController
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public IActionResult Contact()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View();
     }
 }

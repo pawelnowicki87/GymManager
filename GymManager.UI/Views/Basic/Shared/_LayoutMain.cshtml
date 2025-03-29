@@ -38,20 +38,42 @@
         </nav>
     </header>
 
-    <main">
+    <main>
         @RenderBody()
     </main>
 
 
     <footer class="border-top bg-danger p-3 footer text-white">
         <div class="container text-center">
-            &copy; @DateTime.Now.Year - GymManager - 
-            <a class="text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Polityka prywatności</a>
+            &copy; @DateTime.Now.Year - GymManager -
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-white">Polityka prywatności</a>
         </div>
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery.cookie/dist/jquery.cookie.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <div class="privacy-police-info" style="display: none">
+        Serwis wykorzystuje pliki cookies. Koszystając ze strony wyrażasz zgodę na wykorzystywanie plików cookies.
+        <button onclick="closePrivacyPolice()" type="button" class="btn btn-light small mx-3 my-1 privary-police-btn">Ok, rozumiem</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            if ($.coockie("privaryPolicy" !== 1) {
+                    $(".privacy-police-info").show();
+            })
+        })
+
+        function closePrivacyPolicy() {
+                $(".privacy-police-info").hide();
+                    $cookie("privaryPolicy", "1", { path: '/', expires: 365 });
+        }
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

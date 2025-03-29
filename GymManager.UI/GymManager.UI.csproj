@@ -24,4 +24,8 @@
     <ProjectReference Include="..\GymManager.Infrastructure\GymManager.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+
 </Project>
